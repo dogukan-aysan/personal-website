@@ -1,7 +1,7 @@
 import state from "./data.js";
 let { activeSectionId, scrollingOff, slideOutOpen } = state;
 
-import { $feedback, $feedbackButton, $form, $inputs, $negativeIcon, $positiveIcon } from "./elements.js";
+import { $feedback, $feedbackContent, $feedbackButton, $form, $inputs, $negativeIcon, $positiveIcon } from "./elements.js";
 
 export function changeNavItemsColor(item) {
   document.querySelectorAll(".nav-item").forEach((navItem) => {
