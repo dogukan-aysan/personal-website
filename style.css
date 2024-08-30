@@ -368,7 +368,6 @@ header {
   gap: 50px;
   align-items: center;
   justify-content: center;
-  /* padding-bottom: 70px !important; */
   & form {
     min-width: 491px;
     display: flex;
@@ -422,7 +421,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    min-width: 491px;
     height: 429px;
     gap: 70px;
     border: solid 1px rgba(149, 149, 149, 0.5);
@@ -543,6 +542,9 @@ header {
     & > form {
       min-width: 80%;
     }
+    & .feedback {
+      min-width: 80%;
+    }
   }
 
   .footer {
@@ -622,6 +624,9 @@ header {
         font-size: 14px;
         text-align: center;
       }
+    }
+    & .feedback .feedback-content p {
+      font-size: 14px;
     }
   }
 
