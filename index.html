@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dogukan's Personal Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="main-container">
       <nav class="navbar">
         <div class="logo"></div>
         <ul class="nav-items">
@@ -41,206 +42,215 @@
         </div>
       </nav>
       <section data-id="1" id="home" class="hero">
-        <div class="info">
-          <span>Hi I am</span>
-          <span class="name">Dogukan Aysan</span>
-          <h1 class="title">Frontend Developer</h1>
-          <ul class="socials">
-            <a href="https://www.linkedin.com/in/dogukan-aysan/" target="_blank">
-              <li class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"
-                  ></path>
-                </svg>
-              </li>
+        <div class="content">
+          <div class="info">
+            <p>Hi I am</p>
+            <p class="name">Dogukan Aysan</p>
+            <h1 class="title">Front-end Developer</h1>
+            <ul class="socials">
+              <a href="https://www.linkedin.com/in/dogukan-aysan/" target="_blank">
+                <li class="social">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"
+                    ></path>
+                  </svg>
+                </li>
+              </a>
+              <a href="https://github.com/dogukan-aysan" target="_blank">
+                <li class="social">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"
+                    ></path>
+                  </svg>
+                </li>
+              </a>
+            </ul>
+            <a href="/assets/resume.pdf" target="_blank" class="cta-btn download-cv">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3 19H21V21H3V19ZM13 13.1716L19.0711 7.1005L20.4853 8.51472L12 17L3.51472 8.51472L4.92893 7.1005L11 13.1716V2H13V13.1716Z"
+                ></path>
+              </svg>
+              <span>Download CV</span>
             </a>
-            <a href="https://github.com/dogukan-aysan" target="_blank">
-              <li class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"
-                  ></path>
-                </svg>
-              </li>
-            </a>
-          </ul>
-          <a href="/assets/resume.pdf" target="_blank" class="cta-btn download-cv">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M3 19H21V21H3V19ZM13 13.1716L19.0711 7.1005L20.4853 8.51472L12 17L3.51472 8.51472L4.92893 7.1005L11 13.1716V2H13V13.1716Z"
-              ></path>
-            </svg>
-            <span>Download CV</span>
-          </a>
+          </div>
         </div>
-        <div class="illustration-container"><img class="illustration" src="assets/images/illustration.png" /></div>
       </section>
       <section data-id="2" id="about" class="about">
-        <header>
+        <div class="content">
           <h2 class="heading">About Me</h2>
-          <!-- <p>User Interface and User Experience and Also video editing</p> -->
-        </header>
-        <div class="overview">
-          <p class="description">
-            I'm Dogukan Aysan who transitioned from a legal background to pursue a career as a self-taught front-end developer.I made the
-            bold decision to shift gears and become a front-end developer, relying on online resources such as Udemy, Coursera, and YouTube
-            for my education. Unlike following a traditional course or bootcamp, I chose the self-directed route to becoming a front-end
-            developer.Since then, I've been trying to cultivate proficiency in the skills below. My journey underscores my resilience,
-            adaptability, and commitment to continuous learning in the dynamic field of front-end development.
-          </p>
-          <div class="skills">
-            <span class="badge">HTML</span>
-            <span class="badge">CSS</span>
-            <span class="badge">JavaScript</span>
-            <span class="badge">React</span>
-            <span class="badge">Next.js</span>
-            <span class="badge">Tailwind CSS</span>
-            <span class="badge">Git & GitHub</span>
-            <span class="badge">Figma</span>
+          <div class="overview">
+            <div class="description">
+              <p>
+                I'm Dogukan Aysan who transitioned from a legal background to pursue a career as a self-taught front-end developer.I made
+                the bold decision to shift gears and become a front-end developer, relying on online resources such as Udemy, Coursera, and
+                YouTube for my education. Unlike following a traditional course or bootcamp, I chose the self-directed route to becoming a
+                front-end developer.
+              </p>
+              <p>
+                Since then, I've been trying to cultivate proficiency in the skills below. My journey underscores my resilience,
+                adaptability, and commitment to continuous learning in the dynamic field of front-end development.
+              </p>
+            </div>
+            <div class="skills">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">React</span>
+              <span class="badge">Next.js</span>
+              <span class="badge">Tailwind</span>
+              <span class="badge">Figma</span>
+              <span class="badge">Git & GitHub</span>
+            </div>
           </div>
         </div>
       </section>
       <section data-id="3" id="projects" class="projects">
-        <h2 class="heading">Projects</h2>
-        <div class="projects-list">
-          <div class="project">
-            <div class="image abstractly"></div>
-            <div class="info">
-              <p class="description">Fully functional marketing website for a SaaS product built with Next.js and Tailwind CSS</p>
-              <div class="external-links">
-                <a class="external-link" href="https://marketing-website-eight-amber.vercel.app/" target="_blank">
-                  Preview site
-                  <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
-                    />
-                  </svg>
-                </a>
-                <a class="external-link" href="https://github.com/dogukan-aysan/Marketing-website" target="_blank">
-                  View code
-                  <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
-                    />
-                  </svg>
-                </a>
+        <div class="content">
+          <h2 class="heading">Projects</h2>
+          <div class="projects-list">
+            <div class="project">
+              <div class="image abstractly"></div>
+              <div class="info">
+                <h3 class="name">Abstractly</h3>
+                <p class="description">Fully functional marketing website for a SaaS product built with Next.js and Tailwind CSS</p>
+                <div class="external-links">
+                  <a class="external-link" href="https://marketing-website-eight-amber.vercel.app/" target="_blank">
+                    Preview site
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
+                      />
+                    </svg>
+                  </a>
+                  <a class="external-link" href="https://github.com/dogukan-aysan/Marketing-website" target="_blank">
+                    View code
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="project">
-            <div class="image countries"></div>
-            <div class="info">
-              <p class="description">REST Countries API with color theme switcher with React.</p>
-              <div class="external-links">
-                <a class="external-link" href="https://countries-topaz-theta.vercel.app/" target="_blank">
-                  Preview site
-                  <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
-                    />
-                  </svg>
-                </a>
-                <a class="external-link" href="https://github.com/dogukan-aysan/Countries" target="_blank">
-                  View code
-                  <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
-                    />
-                  </svg>
-                </a>
+            <div class="project">
+              <div class="image countries"></div>
+              <div class="info">
+                <h3 class="name">Countries</h3>
+                <p class="description">REST Countries API with color theme switcher with React.</p>
+                <div class="external-links">
+                  <a class="external-link" href="https://countries-topaz-theta.vercel.app/" target="_blank">
+                    Preview site
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
+                      />
+                    </svg>
+                  </a>
+                  <a class="external-link" href="https://github.com/dogukan-aysan/Countries" target="_blank">
+                    View code
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="project">
-            <div class="image ip-tracker"></div>
-            <div class="info">
-              <p class="description">IP Address Tracker with React</p>
-              <div class="external-links">
-                <a class="external-link" href="https://ip-address-tracker-e1f79b.netlify.app/" target="_blank">
-                  Preview site
-                  <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
-                    />
-                  </svg>
-                </a>
-                <a class="external-link" href="ttps://github.com/dogukan-aysan/IP-Address-Tracker" target="_blank">
-                  View code
-                  <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
-                    />
-                  </svg>
-                </a>
+            <div class="project">
+              <div class="image ip-tracker"></div>
+              <div class="info">
+                <h3 class="name">IP Tracker</h3>
+                <p class="description">IP Address Tracker with React</p>
+                <div class="external-links">
+                  <a class="external-link" href="https://ip-address-tracker-e1f79b.netlify.app/" target="_blank">
+                    Preview site
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
+                      />
+                    </svg>
+                  </a>
+                  <a class="external-link" href="ttps://github.com/dogukan-aysan/IP-Address-Tracker" target="_blank">
+                    View code
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.66667 2.5V3.83333H1.33333V11.1667H8.66667V7.83333H10V11.8333C10 12.2015 9.70153 12.5 9.33333 12.5H0.666667C0.29848 12.5 0 12.2015 0 11.8333V3.16667C0 2.79848 0.29848 2.5 0.666667 2.5H4.66667ZM12 0.5V5.83333H10.6667L10.6666 2.77533L5.4714 7.9714L4.52859 7.0286L9.72327 1.83333H6.66667V0.5H12Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section data-id="4" id="contact" class="contact">
-        <header>
+        <div class="content">
           <h2 class="heading">Contact me</h2>
-          <p>Cultivating Connections: Reach Out and Connect with Me</p>
-        </header>
-        <form method="POST">
-          <input type="hidden" name="access_key" value="7d73578b-70e2-4b56-9ceb-8c1c404861a1" />
-          <div class="name-field">
-            <input class="input name-input" name="name" autocomplete="off" type="text" id="name" placeholder="Name" />
-            <p class="error-message error-message--name"></p>
-          </div>
-          <div class="email-field">
-            <input class="input email-input" name="email" autocomplete="off" type="text" id="email" placeholder="Email" />
-            <p class="error-message error-message--email"></p>
-          </div>
-          <div class="message-field">
-            <textarea class="input message-input" name="message" autocomplete="off" placeholder="Message..."></textarea>
-            <p class="error-message error-message--message"></p>
-          </div>
-          <button type="submit" class="cta-btn">
-            <span>Send</span>
-          </button>
-        </form>
-        <div class="feedback">
-          <div class="feedback-content">
-            <div class="icon-container positive">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"
-                ></path>
-              </svg>
+          <form method="post">
+            <input type="hidden" name="access_key" value="7d73578b-70e2-4b56-9ceb-8c1c404861a1" />
+            <div class="name-field">
+              <input class="input name-input" name="name" autocomplete="off" type="text" id="name" placeholder="Name" />
+              <p class="error-message error-message--name"></p>
             </div>
-            <div class="icon-container negative">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
-                ></path>
-              </svg>
+            <div class="email-field">
+              <input class="input email-input" name="email" autocomplete="off" type="text" id="email" placeholder="Email" />
+              <p class="error-message error-message--email"></p>
             </div>
-            <p>Email is sent successfully</p>
+            <div class="message-field">
+              <textarea class="input message-input" name="message" autocomplete="off" placeholder="Message..."></textarea>
+              <p class="error-message error-message--message"></p>
+            </div>
+            <button type="submit" class="cta-btn">
+              <span>Send</span>
+            </button>
+          </form>
+          <div class="feedback">
+            <div class="feedback-content">
+              <div class="icon-container positive">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="icon-container negative">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+                  ></path>
+                </svg>
+              </div>
+              <p>Email is sent successfully</p>
+            </div>
+            <button class="cta-btn"></button>
           </div>
-          <button class="cta-btn"></button>
         </div>
       </section>
+      <footer class="footer">
+        <div class="copyright">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M16.2877 9.42773C15.413 7.97351 13.8195 7 12 7 9.23999 7 7 9.23999 7 12 7 14.76 9.23999 17 12 17 13.8195 17 15.413 16.0265 16.2877 14.5723L14.5729 13.5442C14.0483 14.4166 13.0927 15 12 15 10.3425 15 9 13.6575 9 12 9 10.3425 10.3425 9 12 9 13.093 9 14.0491 9.58386 14.5735 10.4568L16.2877 9.42773ZM22 12C22 6.47998 17.52 2 12 2 6.47998 2 2 6.47998 2 12 2 17.52 6.47998 22 12 22 17.52 22 22 17.52 22 12ZM4 12C4 7.57996 7.57996 4 12 4 16.42 4 20 7.57996 20 12 20 16.42 16.42 20 12 20 7.57996 20 4 16.42 4 12Z"
+            ></path>
+          </svg>
+          <p>2024 by Dogukan Aysan</p>
+        </div>
+        <div class="mail">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z"
+            ></path>
+          </svg>
+          <a class="mail" href="mailto:dogukanaysan01@gmail.com" target="_blank">dogukanaysan01@gmail.com</a>
+        </div>
+      </footer>
     </div>
-    <footer class="footer">
-      <div class="copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M16.2877 9.42773C15.413 7.97351 13.8195 7 12 7 9.23999 7 7 9.23999 7 12 7 14.76 9.23999 17 12 17 13.8195 17 15.413 16.0265 16.2877 14.5723L14.5729 13.5442C14.0483 14.4166 13.0927 15 12 15 10.3425 15 9 13.6575 9 12 9 10.3425 10.3425 9 12 9 13.093 9 14.0491 9.58386 14.5735 10.4568L16.2877 9.42773ZM22 12C22 6.47998 17.52 2 12 2 6.47998 2 2 6.47998 2 12 2 17.52 6.47998 22 12 22 17.52 22 22 17.52 22 12ZM4 12C4 7.57996 7.57996 4 12 4 16.42 4 20 7.57996 20 12 20 16.42 16.42 20 12 20 7.57996 20 4 16.42 4 12Z"
-          ></path>
-        </svg>
-        <p>2024 by Dogukan Aysan</p>
-      </div>
-      <div class="mail">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z"
-          ></path>
-        </svg>
-        <a class="mail" href="mailto:dogukanaysan01@gmail.com" target="_blank">dogukanaysan01@gmail.com</a>
-      </div>
-    </footer>
     <script type="module" src="/js/main.js"></script>
   </body>
 </html>

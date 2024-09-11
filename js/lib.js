@@ -1,14 +1,24 @@
-import state from "./data.js";
-let { activeSectionId, scrollingOff, slideOutOpen } = state;
+import { state } from "./main.js";
 
-import { $feedback, $feedbackContent, $feedbackButton, $form, $inputs, $negativeIcon, $positiveIcon } from "./elements.js";
+import {
+  $feedback,
+  $feedbackContent,
+  $feedbackButton,
+  $form,
+  $inputs,
+  $negativeIcon,
+  $positiveIcon,
+  $slideout,
+  $slideoutCloseButton,
+  $slideoutNavItems,
+} from "./elements.js";
 
 export function changeNavItemsColor(item) {
   document.querySelectorAll(".nav-item").forEach((navItem) => {
     if (item === navItem.textContent.toLowerCase()) {
-      navItem.style.color = slideOutOpen ? "rgb(4, 1, 74)" : "white";
+      navItem.style.color = "hsl(var(--clr-white))";
     } else {
-      navItem.style.color = slideOutOpen ? "black" : "#959595";
+      navItem.style.color = state.slideOutOpen ? "hsl(var(--clr-primary-100))" : "hsl(var(--clr-white) / .3)";
     }
   });
 }
@@ -23,34 +33,46 @@ export function scrollPage(targetId) {
 }
 
 export function clickEventHandler(e) {
-  if (e.target === e.currentTarget || activeSectionId === +e.target.dataset.id) return;
+  if (e.target === e.currentTarget || state.activeSectionId === +e.target.dataset.id) return;
 
-  if (Math.abs(+e.target.dataset.id - activeSectionId) > 1) {
-    scrollingOff = true;
+  if (Math.abs(+e.target.dataset.id - state.activeSectionId) > 1) {
+    state.scrollingOff = true;
   } else {
-    scrollingOff = false;
+    state.scrollingOff = false;
   }
-  activeSectionId = +e.target.dataset.id;
-  if (e.target.dataset.slideout) {
-    console.log("this is an item from slideout");
-  }
+  state.activeSectionId = +e.target.dataset.id;
 
   scrollPage(e.target.textContent.toLowerCase());
+}
+
+export function handleHamburgerClick() {
+  state.slideOutOpen = !state.slideOutOpen;
+  $slideout.classList.toggle("hidden");
+  $slideoutCloseButton.style.cursor = state.slideOutOpen ? "pointer" : "default";
+  $slideoutNavItems.querySelectorAll(".nav-item").forEach((navItem) => (navItem.style.cursor = state.slideOutOpen ? "pointer" : "default"));
+  changeNavItemsColor(document.querySelector(`.nav-item[data-id="${state.activeSectionId}"]`).textContent.toLowerCase());
+}
+
+export function handleCloseBtnClick() {
+  if ($slideoutCloseButton.parentElement.parentElement.classList.contains("hidden")) return;
+  state.slideOutOpen = false;
+  $slideout.classList.toggle("hidden");
+  $slideoutCloseButton.style.cursor = "default";
+  $slideoutNavItems.querySelectorAll(".nav-item").forEach((navItem) => (navItem.style.cursor = "default"));
+  changeNavItemsColor(document.querySelector(`.nav-item[data-id="${state.activeSectionId}"]`).textContent.toLowerCase());
 }
 
 export function observerCallback(entries) {
   const [entry] = entries;
 
-  if (!entry.isIntersecting || activeSectionId === +entry.target.dataset.id) return;
+  if (!entry.isIntersecting || state.activeSectionId === +entry.target.dataset.id) return;
 
-  if (!scrollingOff) {
+  if (!state.scrollingOff) {
     changeNavItemsColor(entry.target.id);
-    activeSectionId = +entry.target.dataset.id;
+    state.activeSectionId = +entry.target.dataset.id;
   }
 
-  scrollingOff = false;
-
-  // console.log("observer callback executed");
+  state.scrollingOff = false;
 }
 
 export function generateErrorMessages(dataObj) {
@@ -92,21 +114,13 @@ export function areInputsValid(inputsObj) {
   Object.keys(errorMessages).forEach((key) => {
     if (errorMessages[key] !== "") {
       document.querySelector(`.error-message--${key}`).textContent = errorMessages[key];
-      document
-        .querySelector(`.${key}-input`)
-        .style.setProperty(
-          "--focus-shadow",
-          "inset 2px 2px 0 0 rgb(154, 75, 75, 0.6), inset -2px -2px 0 0 rgb(154, 75, 75, 0.6), -1.5px 1px 25px 13px rgb(154, 75, 75, 0.3)"
-        );
+      document.querySelector(`.${key}-input`).style.setProperty("--shadow-input-focus", "inset -1px 0px 14px 1px rgba(154, 75, 75, 1)");
       result = false;
     } else {
       document.querySelector(`.error-message--${key}`).textContent = "";
       document
         .querySelector(`.${key}-input`)
-        .style.setProperty(
-          "--focus-shadow",
-          "inset 2px 2px 0 0 rgb(4, 208, 208, 0.6), inset -2px -2px 0 0 rgb(4, 208, 208, 0.6) , -1.5px 1px 25px 6px rgb(4, 208, 208, 0.3)"
-        );
+        .style.setProperty("--shadow-input-focus", "inset -1px 0px 14px 1px hsl(var(--clr-primary-400))");
     }
   });
   return result;

@@ -1,33 +1,19 @@
-import { clickEventHandler, observerCallback, onFormSubmit, handleFeedback } from "../js/lib.js";
+import { clickEventHandler, observerCallback, onFormSubmit, handleFeedback, handleHamburgerClick, handleCloseBtnClick } from "../js/lib.js";
 
-import state from "./data.js";
-let { slideOutOpen } = state;
+import { $feedbackButton, $form, $hamburgerIcon, $navItems, $sections, $slideoutCloseButton, $slideoutNavItems } from "./elements.js";
 
-import {
-  $feedbackButton,
-  $form,
-  $hamburgerIcon,
-  $navItems,
-  $sections,
-  $slideout,
-  $slideoutCloseButton,
-  $slideoutNavItems,
-} from "./elements.js";
+export const state = {
+  activeSectionId: 0,
+  scrollingOff: false,
+  slideOutOpen: false,
+};
 
 // NAVBAR
 // ==================================
 $navItems.addEventListener("click", clickEventHandler);
 $slideoutNavItems.addEventListener("click", clickEventHandler);
-
-$hamburgerIcon.addEventListener("click", function () {
-  slideOutOpen = !slideOutOpen;
-  $slideout.classList.toggle("hidden");
-});
-
-$slideoutCloseButton.addEventListener("click", function () {
-  slideOutOpen = !slideOutOpen;
-  $slideout.classList.toggle("hidden");
-});
+$hamburgerIcon.addEventListener("click", handleHamburgerClick);
+$slideoutCloseButton.addEventListener("click", handleCloseBtnClick);
 
 // OBSERVER
 // ==================================

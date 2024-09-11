@@ -12,7 +12,7 @@ export const $feedback = document.querySelector(".feedback");
 export const $feedbackButton = $feedback.querySelector(".cta-btn");
 export const $feedbackContent = document.querySelector(".feedback-content p");
 
-export const $form = document.querySelector(".contact > form");
+export const $form = document.querySelector(".contact form");
 export const $positiveIcon = document.querySelector(".positive");
 export const $negativeIcon = document.querySelector(".negative");
 export const $inputs = document.querySelectorAll(".input");
