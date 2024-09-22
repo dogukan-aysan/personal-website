@@ -368,12 +368,11 @@ body {
     & .projects-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 2em;
       justify-content: center;
+      gap: 2em;
 
       & .project {
         width: 22.5em;
-        height: 28.6875em;
         & .image {
           height: 13.875em;
 
@@ -386,20 +385,20 @@ body {
           &.abstractly {
             background-image: url("/assets/images/abstractly.png");
           }
+          &.shop-loom {
+            background-image: url("/assets/images/shopLoom.png");
+            background-position: center;
+          }
           &.countries {
             background-image: url("/assets/images/countries.png");
           }
-          &.ip-tracker {
-            background-image: url("/assets/images/ip-tracker.png");
-            background-position: center;
-          }
         }
         & .info {
+          height: 15em;
           padding: 1em;
           position: relative;
-          height: 14em;
 
-          border: solid 1px hsl(var(--clr-primary-900) / 0.3);
+          border: solid 1px hsl(var(--clr-primary-900) / 0.1);
           border-top: none;
           border-radius: 0 0 8px 8px;
 
@@ -415,8 +414,8 @@ body {
           & .description {
             margin-top: 0.5em;
 
-            font-size: var(--fs-md);
-            line-height: var(--lh-md);
+            font-size: var(--fs-sm);
+            line-height: var(--lh-sm);
             letter-spacing: var(--ls);
             color: hsl(var(--clr-white) / 0.4);
           }
@@ -675,7 +674,7 @@ body {
         & .project {
           width: 19.5em;
           & .info {
-            height: 13em;
+            /* height: 13em; */
             & .name {
               font-size: var(--fs-md);
               line-height: var(--fs-md);
@@ -787,7 +786,8 @@ body {
         & .project {
           width: 90%;
           & .info {
-            height: 11em;
+            /* height: fit-content;
+            padding-bottom: 4em; */
             & .name {
               font-size: var(--fs-sm);
               line-height: var(--fs-sm);
